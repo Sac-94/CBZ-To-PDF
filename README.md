@@ -1,11 +1,3 @@
-<function_calls>
-<invoke name="artifacts">
-<parameter name="id">cbz-to-pdf-readme</parameter>
-<parameter name="type">text/markdown</parameter>
-<parameter name="title">README.md for CBZ to PDF Converter</parameter>
-<parameter name="command">create</parameter>
-<parameter name="content"># CBZ to PDF Converter
-
 A simple bash script to convert CBZ (Comic Book ZIP) files to PDF format using ImageMagick.
 
 ## Overview
