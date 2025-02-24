@@ -90,7 +90,7 @@ This tool allows you to quickly convert comic book archives (.cbz files) to PDF 
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [MIT licence]([https://www.example.com](https://opensource.org/license/MIT)). Please see [the licence file]([https://www.example.com](https://github.com/Sac-94/CBZ-To-PDF/blob/main/LICENSE)) for more information.
 
 ## Contributing
 
