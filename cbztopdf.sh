@@ -87,7 +87,6 @@ convert_all_cbz() {
 
     wait # Wait for all remaining jobs to finish
 
-    echo "All conversion tasks launched. Check individual file messages for success or errors."
 }
 
 # Parse command line arguments
