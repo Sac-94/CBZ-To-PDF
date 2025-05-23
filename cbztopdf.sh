@@ -4,7 +4,7 @@
 # For use in Termux and other Unix-like environments
 
 # Check if ImageMagick is installed
-if ! command -v convert &> /dev/null; then
+if ! command -v magick &> /dev/null; then
     echo "ImageMagick is not installed. Please install it with:" >&2
     echo "pkg install imagemagick" >&2
     exit 1
@@ -22,7 +22,7 @@ convert_cbz_to_pdf() {
     local base_name="${cbz_file%.cbz}"
     local pdf_file="${base_name}.pdf"
     local temp_dir
-    temp_dir=$(mktemp -d "/tmp/cbz2pdf_XXXXXXXXXX")
+    temp_dir=$(mktemp -d)
     if [ -z "$temp_dir" ] || [ ! -d "$temp_dir" ]; then
         echo "Failed to create temporary directory" >&2
         return 1
@@ -47,7 +47,7 @@ convert_cbz_to_pdf() {
     fi
     
     # Convert all images to PDF
-    convert $(cat "$temp_dir/filelist.txt") "$pdf_file"
+    magick $(cat "$temp_dir/filelist.txt") "$pdf_file"
     
     # Check if conversion was successful
     if [ $? -eq 0 ]; then
